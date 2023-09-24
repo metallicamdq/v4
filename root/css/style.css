@@ -1117,6 +1117,7 @@ body.dark footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  height: 15px;
 }
 .signature p {
   font-size: 14px;
@@ -1160,6 +1161,7 @@ body.dark footer {
 
 @media all and (max-width: 768px) {
   .signature {
+    height: 50px;
     padding: 10px 4%;
     /* Ajusto el espaciado superior e inferior para pantallas pequeñas */
   }
