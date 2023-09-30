@@ -1,6 +1,7 @@
 main {
     width: 100%;
-    background-color: white;
+    background-color: $color-white;
+	color: $color-black;
 }
 
 //nuevo index//
@@ -18,7 +19,7 @@ main {
     .vuelos-privados {
         width: 100%;
         height: 960px;
-        background-image: url("../../media/VUELOS\ PRIVADOS.jpg");
+        background-image: url("/root/media/VUELOS\ PRIVADOS.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -45,7 +46,7 @@ main {
     .experiencias {
         width: 100%;
         height: 960px;
-        background-image: url("../../media/EXPERIENCIAS.jpg");
+        background-image: url("/root/media/EXPERIENCIAS.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -75,7 +76,7 @@ main {
     .venta-aeronaves {
         width: 100%;
         height: 960px;
-        background-image: url("../../media/VENTA\ DE\ AERONAVES.jpg");
+        background-image: url("/root/media/VENTA\ DE\ AERONAVES.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -101,7 +102,7 @@ main {
     .contacto {
         width: 100%;
         height: 960px;
-        background-image: url("../../media/CONTACTO.jpg");
+        background-image: url("/root/media/CONTACTO.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
