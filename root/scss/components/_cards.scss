@@ -15,7 +15,7 @@
 .card-container-01{
     width: 100%;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     justify-content: center; /* Centra las tarjetas horizontalmente */
     align-items: flex-start; /* Alinéelas arriba en caso de que tengan diferentes alturas */
     flex-wrap: nowrap;
@@ -27,7 +27,8 @@
 .card-container-02{
     width: 100%;
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    margin-top: 40px;
     justify-content: center; /* Centra las tarjetas horizontalmente */
     align-items: flex-start; /* Alinéelas arriba en caso de que tengan diferentes alturas */
     flex-wrap: nowrap;

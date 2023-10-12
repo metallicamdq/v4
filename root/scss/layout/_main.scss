@@ -13,118 +13,6 @@ main {
     background: white;
 }
 
-.section-container {
-    background-color: white;
-
-    .vuelos-privados {
-        width: 100%;
-        height: 960px;
-        background-image: url("/root/media/VUELOS\ PRIVADOS.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: normal;
-        align-content: normal;
-        color: black;
-
-        li {
-            color: black;
-
-            span {
-                color: black;
-                font-weight: 700;
-            }
-
-        }
-
-    }
-
-    .experiencias {
-        width: 100%;
-        height: 960px;
-        background-image: url("/root/media/EXPERIENCIAS.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: normal;
-        align-content: normal;
-        color: black;
-
-        .card {
-            width: min-content;
-        }
-
-        li {
-            color: black;
-
-            span {
-                color: black;
-                font-weight: 700;
-            }
-
-        }
-    }
-
-    .venta-aeronaves {
-        width: 100%;
-        height: 960px;
-        background-image: url("/root/media/VENTA\ DE\ AERONAVES.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: normal;
-        align-content: normal;
-        color: black;
-
-        li {
-            color: black;
-
-            span {
-                color: black;
-                font-weight: 700;
-            }
-
-        }
-    }
-
-    .contacto {
-        width: 100%;
-        height: 960px;
-        background-image: url("/root/media/CONTACTO.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: normal;
-        align-content: normal;
-        color: black;
-
-        li {
-            color: black;
-
-            span {
-                color: black;
-                font-weight: 700;
-            }
-
-        }
-    }
-}
 
 
 // Sobre Nosotros
@@ -184,10 +72,10 @@ main {
     flex-direction: column;
     gap: 35px;
     color: $color-white;
-    background-image: url("../media/flights-background.jpg");
+    background-image: url("../../media/banner-inicio.jpg");
     background-size: cover;
-    background-position: center 5%;
-    //background-attachment: fixed;
+    background-position: center 78%;
+    background-attachment: fixed;
     background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: darken;
 
@@ -199,11 +87,18 @@ main {
 }
 
 .flights-index {
-    background-image: url("../media/banner-inicio-ph3.jpg");
+    background-image: url("/root/media/banner-inicio-ph.jpg");
     background-position: center 78%;
+    border-radius: 25px;
     height: 1300px;
-    padding-bottom: 200px;
+    padding-bottom: 300px;
     background-color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: darken;
+
+    @media all and (min-width: $breakpoint-l) {
+        gap: 350px;
+    }
 }
 
 .flights-inner {
@@ -364,6 +259,7 @@ main {
     font-family: 'poppins', sans-serif;
     font-weight: 400;
 }
+
 .txt-experience-container {
     display: flex;
     width: 100%;
@@ -382,6 +278,7 @@ main {
     align-items: center;
     text-align: center;
 }
+
 .experiences-gift {
     max-width: 100%;
     text-align: center;
@@ -394,7 +291,8 @@ main {
     h2 {
         text-transform: initial;
         font-size: 45px;
-        margin-top: 1cm; /* Ajusta el margen superior según sea necesario */
+        margin-top: 1cm;
+        /* Ajusta el margen superior según sea necesario */
     }
 }
 
@@ -402,8 +300,10 @@ main {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    max-height: 100%; /* Asegura que no se desborde el contenido de experiences-text */
-    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+    max-height: 100%;
+    /* Asegura que no se desborde el contenido de experiences-text */
+    overflow: hidden;
+    /* Oculta cualquier contenido que se desborde */
 
     h2 {
         text-transform: initial;
@@ -415,6 +315,13 @@ main {
         padding-bottom: 20px;
         font-size: 17.5px;
         text-shadow: 1px 1px 2px rgba(4, 4, 4, 0.8);
+    }
+
+    hr {
+        border: none;
+        border-left: 1px solid hsla(200, 10%, 50%, 100);
+        height: 100vh;
+        width: 1px;
     }
 
     body.dark & {
@@ -429,28 +336,34 @@ main {
     .txt-experience-container {
         flex-direction: column;
     }
-    
+
     .experiences-text,
     .experiences-gift {
         max-width: 100%;
-        text-align: left; /* Alinéa el texto a la izquierda en pantallas pequeñas */
+        text-align: left;
+        /* Alinéa el texto a la izquierda en pantallas pequeñas */
+
     }
 }
 
 @media (max-width: 480px) {
     .experiences-text h2 {
-        font-size: 30px; /* Ajusta el tamaño del título en pantallas más pequeñas */
+        font-size: 30px;
+        /* Ajusta el tamaño del título en pantallas más pequeñas */
     }
-    
+
     .experiences-text h3 {
-        font-size: 16px; /* Ajusta el tamaño del subtítulo en pantallas más pequeñas */
+        font-size: 16px;
+        /* Ajusta el tamaño del subtítulo en pantallas más pequeñas */
     }
-    
+
     .experiences-gift h2 {
-        font-size: 30px; /* Ajusta el tamaño del título en pantallas más pequeñas */
+        font-size: 30px;
+        /* Ajusta el tamaño del título en pantallas más pequeñas */
     }
 }
-.card-experiences{
+
+.card-experiences {
     display: flex;
     flex-direction: column;
 }
@@ -777,232 +690,109 @@ video {
     }
 }
 
-// card index//
-$black: #282828;
-$point: #212529;
-$point-light: lighten($point, 5%);
-
-$ratio: 1.618;
-$card_width: 250px;
-$card_height: $card_width * $ratio;
-$card_padding: 20px;
-$card-bgcolor: white;
-$card_margin: 5px;
-$card_round: 10px;
-$card-shadow: -20px -20px 0px 0px $point-light;
-
-$card-padding-basis: 15px;
-$card_head_padding: 0px 0px $card-padding-basis 0px;
-
-* {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-    background-color: $color-white;
-    color: $color-black;
-}
-
-.container {
-    width: 80%;
-    min-height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
+//body index//
+.vuelos-privados {
+    width: 100%;
+    height: 768px;
+    background-image: url("/root/media/VUELOS\ PRIVADOS2.jpg");
+    background-position: center 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
     display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-
-    margin-left: auto;
-    margin-right: 800px;
-}
-
-.center {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-.card {
-    background-color: $card-bgcolor;
-    width: $card_width;
-    min-height: $card_height;
-
-    display: -webkit-box;
-
-    display: -ms-flexbox;
-
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    padding: $card_padding;
-    margin: $card_margin;
+    /* Alinea los elementos verticalmente */
+    justify-content: flex-end;
+    /* Alinea la tarjeta en la parte inferior */
+    align-items: center;
+    /* Centra horizontalmente el contenido */
+    position: relative;
+    /* Establece la posición relativa para posicionar el título */
+}
 
-    -webkit-box-shadow: $card-shadow;
+// card index//
+.custom-card {
+    //background-color: #fff;
+    //background: linear-gradient(to bottom, #000000, #FFD700);
+    //background: linear-gradient(to bottom, #FFD700, #A08000);
+    background: linear-gradient(to bottom, #000000, #333333);
+    //background: linear-gradient(to bottom, #000000, #8B0000);
+    //background: radial-gradient(ellipse at center, #FFD700 0%, #000000 100%);
+    //background: linear-gradient(to bottom, #FFD700, #FFFFFF);
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    /* Coloca la tarjeta en la parte inferior */
+    left: 0;
+    /* Coloca la tarjeta en el lado izquierdo */
+    max-width: 80%;
+    /* Limita el ancho de la tarjeta al 80% del contenedor */
+    transition: box-shadow 0.3s;
+    margin-left: 70px;
+    margin-bottom: 20px;
 
-    box-shadow: $card-shadow;
-    border-radius: $card_round;
-
-    -webkit-animation-name: shadow-show;
-    /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 1.5s;
-    /* Safari 4.0 - 8.0 */
-    animation-name: shadow-show;
-    animation-duration: 1.5s;
-
-    -webkit-transition-timing-function: cubic-bezier(0.795, 0.000, 0.165, 1.000);
-    -o-transition-timing-function: cubic-bezier(0.795, 0.000, 0.165, 1.000);
-    transition-timing-function: cubic-bezier(0.795, 0.000, 0.165, 1.000);
-
-    /* custom */
-    .spanliving {
+    h2 {
+        font-size: 24px;
+        margin: 0;
         color: #a98d02;
-        font-size: 30px;
-        text-align: center;
-        justify-content: center;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        margin: 0px;
-        padding: $card_head_padding;
-        font-family: 'Noto Sans KR', sans-serif;
-        font-size: 30px;
-        color: $black;
-    }
-
-    hr {
-        display: block;
-        border: none;
-        height: 3px;
-        background-color: $point;
-        margin: 0px;
-
-        -webkit-animation-name: line-show;
-        /* Safari 4.0 - 8.0 */
-        -webkit-animation-duration: 0.3s;
-        /* Safari 4.0 - 8.0 */
-        animation-name: line-show;
-        animation-duration: 0.3s;
-        -webkit-transition-timing-function: cubic-bezier(0.795, 0.000, 0.165, 1.000);
-        -o-transition-timing-function: cubic-bezier(0.795, 0.000, 0.165, 1.000);
-        transition-timing-function: cubic-bezier(0.795, 0.000, 0.165, 1.000);
-        /* custom */
-    }
-
-    p {
-        margin: $card-padding-basis 0px 0px 0px;
-        font-family: 'Noto Sans KR', sans-serif;
-        font-weight: 100;
-        letter-spacing: -0.25px;
-        line-height: 1.25;
-        font-size: 16px;
-        word-break: break-all;
-        word-wrap: pre-wrap;
-        color: $black;
-
-        -webkit-animation-name: p-show;
-        /* Safari 4.0 - 8.0 */
-        -webkit-animation-duration: 1.5s;
-        /* Safari 4.0 - 8.0 */
-        animation-name: p-show;
-        animation-duration: 1.5s;
-    }
-
-    button {
-        border: none;
-        background-color: #abb5bf;
-        width: 55%;
-        margin: 10px auto;
-        padding: 10px 30px;
-        color: white;
-        font-family: 'Noto Sans KR', sans-serif;
-        text-transform: uppercase;
-        border-radius: 23px 23px 23px 23px;
-        -webkit-border-radius: 23px 23px 23px 23px;
-        -moz-border-radius: 23px 23px 23px 23px;
-
-        a {
-            color: black;
-        }
-    }
-
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes line-show {
-    from {
-        margin: 0px 100px;
-    }
-
-    to {
-        margin: 0px;
+        font-weight: bold;
+        font-weight: 800;
     }
 }
 
-/* Standard syntax */
-@keyframes line-show {
-    from {
-        margin: 0px 100px;
-    }
 
-    to {
-        margin: 0px;
-    }
+.h3-index {
+    text-align: center;
+    /* Centra el título h3 horizontalmente */
+    position: absolute;
+    top: 50%;
+    /* Coloca el título en el centro vertical */
+    transform: translateY(-50%);
+    /* Ajusta para centrar verticalmente */
+    color: #fff;
+    font-size: 44px;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    padding: 5px 10px;
 }
 
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes p-show {
-    from {
-        color: white;
-    }
-
-    to {
-        color: $black;
-    }
+hr {
+    border: none;
+    height: 1px;
+    background-color: #e1e1e1;
+    margin: 10px 0;
 }
 
-/* Standard syntax */
-@keyframes p-show {
-    from {
-        color: white;
-    }
-
-    to {
-        color: $black;
-    }
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes shadow-show {
-    from {
-        -webkit-box-shadow: 0px 0px 0px 0px #e0e0e0;
-        box-shadow: 0px 0px 0px 0px #e0e0e0;
-    }
-
-    to {
-        -webkit-box-shadow: $card-shadow;
-        box-shadow: $card-shadow;
-    }
+li {
+    margin: 5px 0;
+    color: white;
+    font-weight: 600;
 }
 
-/* Standard syntax */
-@keyframes shadow-show {
-    from {
-        -webkit-box-shadow: 0px 0px 0px 0px #e0e0e0;
-        box-shadow: 0px 0px 0px 0px #e0e0e0;
-    }
+.button {
+    display: inline-block;
+    background-color: rgb(169 141 2 / 69%);
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
 
-    to {
-        -webkit-box-shadow: $card-shadow;
-        box-shadow: $card-shadow;
-    }
+.button:hover {
+    background-color: goldenrod;
+    color: white;
 }
