@@ -551,6 +551,11 @@ body.dark .fleet-text h2 {
   padding-left: 10px;
 }
 
+#tipografia-experiences {
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+}
+
 .experiences-text {
   max-width: 920px;
   margin: 0 auto;
@@ -1345,17 +1350,12 @@ body.dark .whatsapp img {
   flex: 0 0 100%;
   position: relative;
 }
-.custom-carousel-slide img {
-  filter: blur(5px);
-}
 .custom-carousel-slide h3 {
   font-size: xx-large;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   padding: 5px;
-  border: 2px solid white;
   padding: 5px;
-  border-radius: 7px;
 }
 
 .custom-carousel-slide img {
@@ -1365,6 +1365,28 @@ body.dark .whatsapp img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
+  z-index: 0; /* Asegura que la imagen esté detrás de la capa oscura y el título */
+}
+
+.custom-carousel-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Ajusta la opacidad según tus preferencias */
+  z-index: 1; /* Asegura que la capa esté encima de la imagen, pero detrás del título */
+}
+
+.custom-carousel-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  z-index: 0; /* Asegura que la imagen esté detrás de la capa oscura */
 }
 
 /* Estilos de la leyenda del carrusel */
@@ -1374,10 +1396,7 @@ body.dark .whatsapp img {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  padding: 10px;
-  border-radius: 10px;
-  width: auto;
-  font-size: 60px;
+  z-index: 2; /* Asegura que el título esté encima de la capa oscura */
 }
 
 .custom-carousel-caption h3 {

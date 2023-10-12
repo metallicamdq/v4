@@ -1,7 +1,7 @@
 main {
     width: 100%;
     background-color: $color-white;
-	color: $color-black;
+    color: $color-black;
 }
 
 //nuevo index//
@@ -335,6 +335,7 @@ main {
         padding: 55px 0;
     }
 }
+
 .titulo-isologo {
     display: flex;
     flex-direction: row;
@@ -357,6 +358,11 @@ main {
             padding-left: 10px;
         }
     }
+}
+
+#tipografia-experiences {
+    font-family: 'poppins', sans-serif;
+    font-weight: 400;
 }
 
 .experiences-text {
@@ -406,13 +412,14 @@ main {
     justify-content: center;
     align-items: center;
     margin: auto;
-    
+
 }
 
 .experiences-gift {
     max-width: 640px;
     margin: 25px auto;
-    h2{
+
+    h2 {
         text-align: center;
     }
 }
@@ -508,9 +515,11 @@ video {
     gap: 25px;
     align-items: center;
     text-align: justify;
-    p{
+
+    p {
         color: grey;
-        strong{
+
+        strong {
             color: black;
         }
     }
