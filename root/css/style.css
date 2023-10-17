@@ -856,6 +856,63 @@ body.dark .experience-text div {
   /* Establece la posición relativa para posicionar el título */
 }
 
+.experiencias-index {
+  width: 100%;
+  height: 768px;
+  background-image: url("/root/media/Experiencias inicio.jpg");
+  background-position: center 37%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  /* Alinea los elementos verticalmente */
+  justify-content: flex-end;
+  /* Alinea la tarjeta en la parte inferior */
+  align-items: center;
+  /* Centra horizontalmente el contenido */
+  position: relative;
+  /* Establece la posición relativa para posicionar el título */
+}
+
+.venta-aeronaves {
+  width: 100%;
+  height: 768px;
+  background-image: url("/root/media/VENTA DE AERONAVES.jpg");
+  background-position: center 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  /* Alinea los elementos verticalmente */
+  justify-content: flex-end;
+  /* Alinea la tarjeta en la parte inferior */
+  align-items: center;
+  /* Centra horizontalmente el contenido */
+  position: relative;
+  /* Establece la posición relativa para posicionar el título */
+}
+
+.contacto-inicio {
+  width: 100%;
+  height: 768px;
+  background-image: url("/root/media/contacto inicio.jpg");
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  /* Alinea los elementos verticalmente */
+  justify-content: flex-end;
+  /* Alinea la tarjeta en la parte inferior */
+  align-items: center;
+  /* Centra horizontalmente el contenido */
+  position: relative;
+  /* Establece la posición relativa para posicionar el título */
+}
+
 .custom-card {
   background: linear-gradient(to bottom, #000000, #333333);
   border: 1px solid black;
@@ -897,6 +954,7 @@ body.dark .experience-text div {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
   display: inline-block;
   padding: 5px 10px;
+  font-family: Raleway;
 }
 
 hr {
@@ -945,6 +1003,7 @@ body.dark footer {
 }
 
 .footer-container {
+  font-family: poppins, sans-serif;
   display: flex;
   flex-wrap: wrap;
   color: white;
@@ -1041,7 +1100,7 @@ body.dark footer {
 .signature {
   width: 100%;
   color: #ffffff;
-  background-color: #003726;
+  background-color: black;
   padding: 20px 0;
   display: flex;
   flex-direction: column;
