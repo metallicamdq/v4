@@ -22,7 +22,7 @@ body {
   margin: auto;
   background-color: #ffffff;
   color: black;
-  font-family: "Poppins", sans-serif;
+  font-family: poppins, sans-serif;
 }
 body p {
   margin: 0;
@@ -474,6 +474,7 @@ body.dark .fleet-text h2 {
   width: 100%;
   margin: auto;
   gap: 15px;
+  text-align: justify;
 }
 
 .experiences-text,
@@ -512,6 +513,10 @@ body.dark .fleet-text h2 {
   /* Asegura que no se desborde el contenido de experiences-text */
   overflow: hidden;
   /* Oculta cualquier contenido que se desborde */
+  width: 100%;
+}
+.experiences-text p {
+  width: 70%;
 }
 .experiences-text h2 {
   text-transform: initial;
@@ -838,6 +843,7 @@ body.dark .experience-text div {
 }
 
 .vuelos-privados {
+  position: relative;
   width: 100%;
   height: 768px;
   background-image: url("/root/media/VUELOS PRIVADOS2.jpg");
@@ -847,16 +853,31 @@ body.dark .experience-text div {
   border-radius: 25px;
   display: flex;
   flex-direction: column;
-  /* Alinea los elementos verticalmente */
   justify-content: flex-end;
-  /* Alinea la tarjeta en la parte inferior */
   align-items: center;
-  /* Centra horizontalmente el contenido */
+}
+
+/* Pseudo-elemento para agregar un fondo negro */
+.vuelos-privados::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según tus preferencias */
+  z-index: 1; /* Asegura que esté por encima de la imagen de fondo */
+  border-radius: 25px; /* Ajusta el borde para que coincida con el contenedor */
+}
+
+/* Ajusta el índice z para el contenido */
+.custom-card, .h3-index {
   position: relative;
-  /* Establece la posición relativa para posicionar el título */
+  z-index: 2; /* Asegura que el contenido esté por encima del fondo oscurecido */
 }
 
 .experiencias-index {
+  position: relative;
   width: 100%;
   height: 768px;
   background-image: url("/root/media/Experiencias inicio.jpg");
@@ -875,7 +896,20 @@ body.dark .experience-text div {
   /* Establece la posición relativa para posicionar el título */
 }
 
+.experiencias-index:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según tus preferencias */
+  z-index: 1; /* Asegura que esté por encima de la imagen de fondo */
+  border-radius: 25px; /* Ajusta el borde para que coincida con el contenedor */
+}
+
 .venta-aeronaves {
+  position: relative;
   width: 100%;
   height: 768px;
   background-image: url("/root/media/VENTA DE AERONAVES.jpg");
@@ -894,7 +928,20 @@ body.dark .experience-text div {
   /* Establece la posición relativa para posicionar el título */
 }
 
+.venta-aeronaves:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según tus preferencias */
+  z-index: 1; /* Asegura que esté por encima de la imagen de fondo */
+  border-radius: 25px; /* Ajusta el borde para que coincida con el contenedor */
+}
+
 .contacto-inicio {
+  position: relative;
   width: 100%;
   height: 768px;
   background-image: url("/root/media/contacto inicio.jpg");
@@ -911,6 +958,18 @@ body.dark .experience-text div {
   /* Centra horizontalmente el contenido */
   position: relative;
   /* Establece la posición relativa para posicionar el título */
+}
+
+.contacto-inicio:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según tus preferencias */
+  z-index: 1; /* Asegura que esté por encima de la imagen de fondo */
+  border-radius: 25px; /* Ajusta el borde para que coincida con el contenedor */
 }
 
 .custom-card {
@@ -994,6 +1053,7 @@ li {
 
 footer {
   height: auto;
+  font-family: poppins, sans-serif;
   background-color: black;
   color: #ffffff;
 }
@@ -1013,6 +1073,7 @@ body.dark footer {
   margin: auto;
   padding-top: 150px;
   padding-bottom: 20px;
+  font-weight: bold;
 }
 
 .map-container {
